@@ -1,27 +1,23 @@
 // Copyright (c) 2024, Extension and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on('DSC Purchase Order', {
-// 	// refresh: function(frm) {
-
-// 	// }
-// });
-
 frappe.ui.form.on('DSC Purchase Order', {
-	setup: function(frm) {
-		frm.set_query("document", function() {
-			return {"filters": {
-				'docstatus': 1
-			}};
-		}); 
+	setup: function (frm) {
+		frm.set_query("document", function () {
+			return {
+				"filters": {
+					'docstatus': 1
+				}
+			};
+		});
 	},
-	before_workflow_action: function(frm){
+	before_workflow_action: function (frm) {
 		console.log('before')
 		console.log(frm.doc.workflow_action)
 	},
-	after_workflow_action: function(frm){
+	after_workflow_action: function (frm) {
 		console.log(frm.doc.workflow_action)
-		if(frm.doc.workflow_action != "Cancel"){
+		if (frm.doc.workflow_action != "Cancel") {
 			frappe.call({
 				'method': "dsc_erpnext.dsc_api.get_access_code",
 				'args': {
@@ -30,13 +26,12 @@ frappe.ui.form.on('DSC Purchase Order', {
 				},
 				freeze: true,
 				freeze_message: __("Sending"),
-				'callback': function(r){
-					if(r.message){
+				'callback': function (r) {
+					if (r.message) {
 						window.location.href = r.message
-						//frappe.db.set_value(frm.doc.doctype, frm.doc.name, 'workflow_state',"DSC Completed")
 					}
 				},
-				'error': function() {
+				'error': function () {
 					console.log('error')
 				},
 			})

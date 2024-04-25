@@ -2,14 +2,10 @@ from . import __version__ as app_version
 
 app_name = "dsc_erpnext"
 app_title = "Dsc Erpnext"
-app_publisher = "Extension"
-app_description = "Dsc Erpnext"
-app_email = "hello@extensioncrm.com"
+app_publisher = "Sonu Kumar"
+app_description = "Docusig Signature"
+app_email = "sonu@extensioncrm.com"
 app_license = "MIT"
-
-
-
-
 
 
 doc_events = {

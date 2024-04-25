@@ -1,50 +1,39 @@
 {
  "actions": [],
- "autoname": "DSCSI-.####",
- "creation": "2024-01-17 15:36:50.480490",
+ "allow_rename": 1,
+ "autoname": "D-PI-.####",
+ "creation": "2024-04-25 11:54:57.200776",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "document_type",
   "document",
-  "workflow",
-  "signer_email",
-  "column_break_4",
   "status",
   "print_format",
+  "column_break",
   "pdf_document",
-  "signer_name",
-  "section_break_7",
-  "documents",
+  "amended_from",
   "workflow_state",
+  "workflow",
   "code",
   "previous_state",
+  "section_break",
+  "documents",
   "amended_from"
  ],
  "fields": [
   {
    "fieldname": "document_type",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Document Type",
    "options": "DocType"
   },
   {
    "fieldname": "document",
    "fieldtype": "Dynamic Link",
-   "in_list_view": 1,
    "label": "Document",
    "options": "document_type"
-  },
-  {
-   "fieldname": "workflow",
-   "fieldtype": "Data",
-   "label": "Workflow"
-  },
-  {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "status",
@@ -56,8 +45,11 @@
    "fieldname": "print_format",
    "fieldtype": "Link",
    "label": "Print Format",
-   "options": "Print Format",
-   "read_only": 1
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
   },
   {
    "allow_on_submit": 1,
@@ -66,24 +58,10 @@
    "label": "PDF Document"
   },
   {
-   "fieldname": "section_break_7",
-   "fieldtype": "Section Break"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "documents",
-   "fieldtype": "Table",
-   "label": "Documents",
-   "no_copy": 1,
-   "options": "Digital Signature Signed Document"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
-   "no_copy": 1,
-   "options": "Digital Signature",
-   "print_hide": 1,
+   "options": "DSC Purchase Invoice",
    "read_only": 1
   },
   {
@@ -93,6 +71,12 @@
    "hidden": 1,
    "label": "Workflow state",
    "no_copy": 1
+  },
+  {
+   "fieldname": "workflow",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Workflow"
   },
   {
    "allow_on_submit": 1,
@@ -109,36 +93,39 @@
    "read_only": 1
   },
   {
+   "fieldname": "section_break",
+   "fieldtype": "Section Break",
+   "label": "Other"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "no_copy": 1,
+   "options": "Digital Signature Signed Document"
+  },
+  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Digital Signature",
+   "options": "DSC Purchase Invoice",
    "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "signer_email",
-   "fieldtype": "Data",
-   "label": "Signer Email"
-  },
-  {
-   "fieldname": "signer_name",
-   "fieldtype": "Data",
-   "label": "Signer Name"
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-24 19:13:53.576564",
+ "modified": "2024-04-25 11:54:57.200776",
  "modified_by": "Administrator",
  "module": "Dsc Erpnext",
- "name": "DSC Sales Invoice",
+ "name": "DSC Purchase Invoice",
  "owner": "Administrator",
  "permissions": [
   {
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

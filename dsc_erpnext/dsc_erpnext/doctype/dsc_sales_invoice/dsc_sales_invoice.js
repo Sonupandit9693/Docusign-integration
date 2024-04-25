@@ -1,13 +1,6 @@
 // Copyright (c) 2024, Extension and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on('DSC Sales Invoice', {
-// 	// refresh: function(frm) {
-
-// 	// }
-// });
-
-
 frappe.ui.form.on('DSC Sales Invoice', {
 	setup: function (frm) {
 		frm.set_query("document", function () {
@@ -19,7 +12,8 @@ frappe.ui.form.on('DSC Sales Invoice', {
 		});
 	},
 	before_workflow_action: function (frm) {
-		console.log('before workflow action:', frm.doc.workflow_action);
+		console.log('before')
+		console.log(frm.doc.workflow_action)
 	},
 	after_workflow_action: function (frm) {
 		if (frm.doc.workflow_action != "Cancel") {
