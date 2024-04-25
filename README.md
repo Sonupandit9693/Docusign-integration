@@ -1,5 +1,6 @@
 # Docusign Integration for Frappe ERPNext
 
+
 ## Introduction
 
 This custom app enables seamless integration between Frappe ERPNext and Docusign, allowing users to digitally sign documents directly within the ERPNext environment.
@@ -18,7 +19,48 @@ This custom app enables seamless integration between Frappe ERPNext and Docusign
     ```
 3. After installation, navigate to Docusign Settings to configure the integration.
 
-## Configuration
+
+## Docusign Developer Account Setup
+1. Navigate to App and Key sections.
+    <img src="./asset/appandkey.png" height="100px"> <br>
+
+2. Add New App
+    <img src="./asset/addapp.png"  height="100px" /> <br>
+
+3. Find your Integration Key.
+    <img src="./asset/integrationkey.png" height="50px"> <br>
+
+4. Genrate Secrate Key
+    <img src="./asset/secratekey.png" height="50px"> <br>
+
+5. Add rediret Uri 
+    ```bash
+        <domain name > /api/method/dsc_erpnext.dsc_api.auth_login
+    ```
+    <img src="./asset/redirecturi.png" height="50px"><br>
+
+6. And Save Configuration
+    <img src="./asset/save.png" height="20px"><br>
+
+
+## Webhook Setup on Docusign
+1. Navigate Connect Section
+    <img src="./asset/connect.png" height="100"><br>
+
+2. Add Configuration
+    <img src="./asset/webhookconfig.png" height="100px"><br>
+
+3. Add Webhook Endpoint
+    ```bash
+         <Domain name>/api/method/dsc_erpnext.dsc_api.sign_document
+    ```
+    <img src="./asset/webhookurl.png" height="80px"> <br>
+
+4. Trigger Event Setup
+    <img src="./asset/triggerevent.png" height="100px">
+
+
+## Erpnext Configuration
 
 In the Docusign Settings, provide the following configuration details:
 
@@ -28,13 +70,20 @@ In the Docusign Settings, provide the following configuration details:
 * Base Path
 * Server URL
 
+1. Find Docusign Settings 
+    <img src="./asset/Cofiguration.png"><br>
+    And Add server url <domain name> it is requires <br>
+    <img src="./asset/serevrurl.png" height="80px"><br>
+
 
 ## Digital Signature Document Setup
+1. Find Digital Signature Document
+    <img src="./asset/digitalsignature.png" height="100px"><br>
 
-1. Access the Digital Signature Document section.
-2. Add a document and specify the format ready for signing.
-3. Enter the signer's email or name and assign a role granting permission to sign the document.
-4. Currently supported documents: Sales Invoice, Purchase Order.
+2. Access the Digital Signature Document section.
+3. Add a document and specify the format ready for signing.
+4. Enter the signer's email or name and assign a role granting permission to sign the document.
+5. Currently supported documents: Sales Invoice, Purchase Order.
 
 ## Document Signing Process
 
