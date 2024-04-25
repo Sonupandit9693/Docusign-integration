@@ -21,43 +21,43 @@ This custom app enables seamless integration between Frappe ERPNext and Docusign
 
 
 ## Docusign Developer Account Setup
-1. Navigate to App and Key sections.
-    <img src="./asset/appandkey.png" height="100px"> <br>
+1. Navigate to App and Key sections. <br>
+    <img src="./asset/appandkey.png" > <br>
 
-2. Add New App
-    <img src="./asset/addapp.png"  height="100px" /> <br>
+2. Add New App <br>
+    <img src="./asset/addapp.png"  /> <br>
 
-3. Find your Integration Key.
-    <img src="./asset/integrationkey.png" height="50px"> <br>
+3. Find your Integration Key. <br>
+    <img src="./asset/integrationkey.png" > <br>
 
-4. Genrate Secrate Key
-    <img src="./asset/secratekey.png" height="50px"> <br>
+4. Genrate Secrate Key <br>
+    <img src="./asset/secratekey.png" > <br>
 
 5. Add rediret Uri 
     ```bash
         <domain name > /api/method/dsc_erpnext.dsc_api.auth_login
     ```
-    <img src="./asset/redirecturi.png" height="50px"><br>
+    <img src="./asset/redirecturi.png" ><br>
 
-6. And Save Configuration
+6. And Save Configuration <br>
     <img src="./asset/save.png" height="20px"><br>
 
 
 ## Webhook Setup on Docusign
-1. Navigate Connect Section
-    <img src="./asset/connect.png" height="100"><br>
+1. Navigate Connect Section <br>
+    <img src="./asset/connect.png" ><br>
 
-2. Add Configuration
-    <img src="./asset/webhookconfig.png" height="100px"><br>
+2. Add Configuration <br>
+    <img src="./asset/webhookconfig.png" ><br>
 
-3. Add Webhook Endpoint
+3. Add Webhook Endpoint <br>
     ```bash
          <Domain name>/api/method/dsc_erpnext.dsc_api.sign_document
     ```
-    <img src="./asset/webhookurl.png" height="80px"> <br>
+    <img src="./asset/webhookurl.png"> <br>
 
-4. Trigger Event Setup
-    <img src="./asset/triggerevent.png" height="100px">
+4. Trigger Event Setup <br>
+    <img src="./asset/triggerevent.png" >
 
 
 ## Erpnext Configuration
@@ -70,15 +70,15 @@ In the Docusign Settings, provide the following configuration details:
 * Base Path
 * Server URL
 
-1. Find Docusign Settings 
+1. Find Docusign Settings  <br>
     <img src="./asset/Cofiguration.png"><br>
     And Add server url <domain name> it is requires <br>
-    <img src="./asset/serevrurl.png" height="80px"><br>
+    <img src="./asset/serevrurl.png"><br>
 
 
 ## Digital Signature Document Setup
 1. Find Digital Signature Document
-    <img src="./asset/digitalsignature.png" height="100px"><br>
+    <img src="./asset/digitalsignature.png" ><br>
 
 2. Access the Digital Signature Document section.
 3. Add a document and specify the format ready for signing.
