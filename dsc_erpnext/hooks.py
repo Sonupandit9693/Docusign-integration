@@ -77,7 +77,7 @@ doc_events = {
 # ------------
 
 # before_install = "dsc_erpnext.install.before_install"
-# after_install = "dsc_erpnext.install.after_install"
+after_install = "dsc_erpnext.utils.utils.add_field_properties"
 
 # Uninstallation
 # ------------
