@@ -68,6 +68,13 @@ def create_doctype(doctype):
                     "options": "Print Format",
                 },
                 {
+                    "doctype" : "DocField",
+                    "fieldname" : "signer_email",
+                    "read_only" : 1,
+                    "fieldtype" : "Data",
+                    "label" : "Signer Email"
+                },
+                {
                     "doctype": "DocField",
                     "fieldname": "column_break",
                     "fieldtype": "Column Break"
@@ -102,6 +109,13 @@ def create_doctype(doctype):
                     "hidden":1,
                     "fieldtype": "Data",
                     "label": "Workflow"
+                },
+                {
+                    "doctype" : "DocField",
+                    "fieldname" : "signer_name",
+                    "read_only" : 1,
+                    "fieldtype" : "Data",
+                    "label" : "Signer Name"
                 },
                 {
                     "doctype": "DocField",
