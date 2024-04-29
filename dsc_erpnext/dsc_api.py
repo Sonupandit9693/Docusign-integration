@@ -104,12 +104,10 @@ def get_signing_url(doctype, docname, token, code):
         })
         ds_doc.save()
         frappe.db.set_value(ds_doc.document_type, ds_doc.document, 'dsc_status', ds_doc.workflow_state)
-
+        pathValue = doctype.lower().replace(" ", "-")
+        location_url = f"/app/{pathValue}"
         frappe.local.response['type'] = 'redirect'
-        if doctype == "DSC Sales Invoice":
-            frappe.local.response['location'] = "/app/dsc-sales-invoice"
-        elif doctype == "DSC Purchase Order":
-            frappe.local.response['location'] = "/app/dsc-purchase-order"
+        frappe.local.response['location'] = location_url
         frappe.db.commit()
     except Exception as e:
         frappe.logger("docusign").exception(e)
