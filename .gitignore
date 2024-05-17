@@ -3,5 +3,5 @@
 *.egg-info
 *.swp
 tags
-dsc_erpnext/docs/current
+docusign_integration/docs/current
 node_modules/

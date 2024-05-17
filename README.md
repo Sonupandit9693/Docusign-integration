@@ -15,7 +15,7 @@ This custom app enables seamless integration between Frappe ERPNext and Docusign
     ```
     
     ```bash
-    bench --site [site name] install-app dsc_erpnext
+    bench --site [site name] install-app docusign_integration
     ```
 3. After installation, navigate to Docusign Settings to configure the integration.
 
@@ -35,7 +35,7 @@ This custom app enables seamless integration between Frappe ERPNext and Docusign
 
 5. Add rediret Uri 
     ```bash
-        <domain name > /api/method/dsc_erpnext.dsc_api.auth_login
+        <domain name > /api/method/docusign_integration.dsc_api.auth_login
     ```
     <img src="./asset/redirecturi.png" ><br>
 
@@ -52,7 +52,7 @@ This custom app enables seamless integration between Frappe ERPNext and Docusign
 
 3. Add Webhook Endpoint <br>
     ```bash
-         <Domain name>/api/method/dsc_erpnext.dsc_api.sign_document
+         <Domain name>/api/method/docusign_integration.dsc_api.sign_document
     ```
     <img src="./asset/webhookurl.png"> <br>
 

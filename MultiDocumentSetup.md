@@ -29,7 +29,7 @@
 
     function trigger_docusign_authorization(frm) {
         frappe.call({
-            'method': "dsc_erpnext.dsc_api.get_access_code",
+            'method': "docusign_integration.dsc_api.get_access_code",
             'args': {
                 'doctype': frm.doc.doctype,
                 'docname': frm.doc.name

@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include dsc_erpnext *.css
-recursive-include dsc_erpnext *.csv
-recursive-include dsc_erpnext *.html
-recursive-include dsc_erpnext *.ico
-recursive-include dsc_erpnext *.js
-recursive-include dsc_erpnext *.json
-recursive-include dsc_erpnext *.md
-recursive-include dsc_erpnext *.png
-recursive-include dsc_erpnext *.py
-recursive-include dsc_erpnext *.svg
-recursive-include dsc_erpnext *.txt
-recursive-exclude dsc_erpnext *.pyc
+recursive-include docusign_integration *.css
+recursive-include docusign_integration *.csv
+recursive-include docusign_integration *.html
+recursive-include docusign_integration *.ico
+recursive-include docusign_integration *.js
+recursive-include docusign_integration *.json
+recursive-include docusign_integration *.md
+recursive-include docusign_integration *.png
+recursive-include docusign_integration *.py
+recursive-include docusign_integration *.svg
+recursive-include docusign_integration *.txt
+recursive-exclude docusign_integration *.pyc
